@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖ola leer con cuidado💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            color: #333;
+            transition: background-color 0.5s ease;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .screen {
+            display: none;
+            animation: fadeIn 0.8s ease;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .main-img {
+            width: 280px;
+            height: auto;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: none;
+        }
+
+        .main-img:hover {
+            transform: scale(1.05);
+        }
+
+        .card {
+            background: repeating-linear-gradient(white,
+                    white 28px,
+                    #e3e3e3 29px);
+            border-radius: 0;
+            /* esquinas en punta */
+            padding: 40px 60px;
+            border: 2px solid #e5e5e5;
+            width: 95%;
+            max-width: 900px;
+            text-align: left;
+            margin: 0 auto;
+            box-sizing: border-box;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease;
+        }
+
+        .card h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            text-align: left;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            color: #444;
+        }
+
+        .card p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3em;
+            line-height: 1.6;
+            text-align: justify;
+            color: #444;
+            margin: 10px 0;
+        }
+
+        .return-btn {
+            margin-top: 25px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            background-color: #ff4f81;
+            color: white;
+        }
+
+        .return-btn:hover {
+            background-color: #ff2a66;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="screen active" id="screen1">
+        <h2>Hola mi amor, te llegó un correo</h2>
+        <img src="https://i.pinimg.com/736x/ff/f5/09/fff50907173be3563c30d60e1baa6cbc.jpg?fbclid=IwY2xjawRTb29leHRuA2FlbQIxMABicmlkETFhYVZaTXNnVk9vaHhFT25Jc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnfSlMulk0sfhtpfIAgCf1Y_gHfiNgJgXW7Tgph_m4Zz1Nd79pL_d98r5JRr_aem_C2SgLTmTpiAlRGB_4mWSSQ" alt="Correo" class="main-img" onclick="nextScreen(2)">
+    </div>
+    <div class="screen" id="screen2">
+        <h2>Es una cartita corta para vos :3</h2>
+        <img src="https://i.pinimg.com/736x/08/8a/d8/088ad89bd98763783954b4aa5b957f89.jpg?fbclid=IwY2xjawRTcMVleHRuA2FlbQIxMABicmlkETFhYVZaTXNnVk9vaHhFT25Jc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHqMmKIj2osQSP3_OqeDW4lO_qcWgwlER-BlGnBOT_Z1IZBU4RFlUEFhxajj-_aem_HGUJDdqPjNvky3tZL1QnHg" alt="Carta" class="main-img" onclick="nextScreen(3)">
+    </div>
+    <div class="screen" id="screen3">
+        <h2>Abrilo</h2>
+        <img src="https://i.pinimg.com/736x/0b/97/89/0b978918f0efa0174a6e72d67f2c442a.jpg?fbclid=IwY2xjawRTcNBleHRuA2FlbQIxMABicmlkETFhYVZaTXNnVk9vaHhFT25Jc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHqw9j1-Zl_-ZRpCiM08gij38TXYxw_xdszBL0rKZktc01mwOsy_iR2Ne3Mic_aem_nFUFuUtxkF69XuZ-AzvIjg" alt="Sobre" class="main-img" onclick="nextScreen(4)">
+    </div>
+    <div class="screen" id="screen4">
+        <h2>lo programe en 10 minutos okay? pero si vas a leerlo estas firmando con el diablo y prometiendo que me vas a amar toda la vida y nunca vas a dejarme, segura?</h2>
+        <img src="https://i.pinimg.com/736x/40/0d/cf/400dcf7b1230e9e6ca787fa30a66c924.jpg?fbclid=IwY2xjawRTcNhleHRuA2FlbQIxMABicmlkETFhYVZaTXNnVk9vaHhFT25Jc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHuuiBHFqfh-kx3IYkFk0wTpfJIM5dKZavciUw2oeavgCcKM2n_X3V8ajpv-O_aem_AWfTdYyjcC23b58m_iUwOg" alt="Carta lista" class="main-img" onclick="nextScreen(5)">
+    </div>
+    <div class="screen" id="screen5">
+        <div class="card">
+            <h3>Sofia Karen la mujer que mas amo</h3>
+            <p>Hoy no queria simplemente decirte que estoy re contento por cumplir otro mes con vos mas alla
+                de como estamos ultimamente, si no tambien recordarte todas esas cosas que a veces
+                con el quilombo de todos los dias, uno se termina olvidado. Se que ultimamente venis cargando
+                con un monton de cosas, que hay dias que se hacen super dificiles y que el cansancio no ayuda.</p>
+            <p>Pero quiero que sepas que yo te veo, veo el esfuerzo que le metes a todo, veo las ganas
+                que le metes a todo mas alla de todo y de verdad admiro muchisimo esa fuerza que tenes.
+                No sientas que tenes que poder vos sola con todo, acordate que somos un equipo y que mi mano
+                va a estar siempre ahi cuando necesites apoyarte, descansar un poco o tomar impulso para seguir.</p>
+            <p>Nuestra relacion es mi lugar seguro, mi cable a tierra, y lo que mas quiero es que para vos sea igual
+                vamos a salir adelante con cada proyecto y con cada meta que nos propongamos, porque lo que estamos
+                armando es de verdad y es solido, no dejes que las palidas de un momento te hagan dudar de todo
+                lo que vales y de todo lo que sos capaz de lograr.</p>
+            <p>Estoy con vos en las buenas, pero sobre todo estoy ahora, para recordarte que sos una mujer increible
+                y que nos espera un futuro espetacular yo se que sos vos y quiero seguir caminando por que quiero
+                disfrutar de todo con vos, gracias por todo de verdad, gracias por elegirme, incluso cuando los dias
+                vienen grises, Te amo con mi alma.</p>
+            <p>Enzo💌</p>
+        </div>
+        <div style="text-align: center;">
+            <button class="return-btn" onclick="nextScreen(1)">🔙 Regresar</button>
+        </div>
+    </div>
+    <script>
+        function nextScreen(num) {
+            const current = document.querySelector(".screen.active");
+            if (current) current.classList.remove("active");
+            document.getElementById("screen" + num).classList.add("active");
+        }
+    </script>
+</body>
+
+</html>
